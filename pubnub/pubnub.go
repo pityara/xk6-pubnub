@@ -6,9 +6,8 @@ import (
     "log"
     "sync"
 
-    "github.com/go-redis/redis/v8"
-
-    "github.com/k6io/xk6/js/modules"
+    "go.k6.io/k6/js/common"
+    "go.k6.io/k6/js/modules"
     "github.com/pubnub/go/v7"
 )
 
