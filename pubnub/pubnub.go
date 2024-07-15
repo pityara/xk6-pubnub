@@ -1,12 +1,8 @@
 package pubnub
 import (
-    "context"
-    "time"
-    "encoding/json"
     "log"
     "sync"
 
-    "go.k6.io/k6/js/common"
     "go.k6.io/k6/js/modules"
     "github.com/pubnub/go/v7"
 )
@@ -34,7 +30,7 @@ func (p *PubNub) Configure(config Config) {
 
     p.channel = config.Channel
 
-    pubnubConfig := pubnub.NewConfig()
+    pubnubConfig := pubnub.NewConfig("")
     pubnubConfig.PublishKey = config.PublishKey
     pubnubConfig.SubscribeKey = config.SubscribeKey
     p.client = pubnub.NewPubNub(pubnubConfig)
